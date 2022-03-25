@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>InnoHack 1.0</title> 
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+      <!-- Main CSS File -->
+      <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+      <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between" style="display: inline-block; vertical-align:middle; text-align: center;">
+          <h1 class="logo"><a href="InnoHack.html">InnoHack 1.0</a></h1>
+        </div>
+      </header>
+
+
+
+      <main id="main">
+          <section id="about" class="about">
+            <div class="container">
+
+              <div class="row-content">
+                <div>
+                  <h4>Welcome to the India's one of the largest hackathons to be ever conducted virtually.</h4>
+                  <p>Gear up to create impactful solutions to existing problems and get a chance to win goodies!</p>
+
+                  <a href="https://forms.gle/PZ1Kk5ruR77wWXGs5" target=_blank class="btn-register">REGISTER HERE</a>
+                </div>
+                
+                <div class="info">
+                  <h4>DATE : APRIL 02, 2022</h4>
+                  <h4>TIME : 24 hours starting from 10:00am</h4>
+                  <h4>VENUE : Virtual</h4>
+                  
+                </div>
+
+                
+              </div>
+            </div>
+          </section>
+
+          
+          
+          <section id="timer">
+            <div class="countdown">00 : 00 : 00 : 00</div>
+            
+          </section>
+
+          <div>
+            <img src="https://media.istockphoto.com/vectors/hackathlon-vector-illustration-tiny-programmers-competition-person-vector-id1189873851?k=20&m=1189873851&s=612x612&w=0&h=zb9XPN7EEHRl1O00N42nvboXR95h2feFZwW49uwSQe4=" class="image">
+          </div>
+
+          
+          
+          
+          <section id="quotes" class="quotes section-bg">
+            <div class="container">
+              <h2><em><strong>Hackathons are where your crazy ideas become your reality.</strong></em></h2>
+            </div>
+          </section><!-- End Quote Section -->
+            
+            
+        </main>
+        <script>
+         // Setup End Date for Countdown (getTime == Time in Milleseconds)
+         let launchDate = new Date("Apr 02,2022 12:00:00").getTime();
+
+         // Setup Timer to tick every 1 second
+         let timer = setInterval(tick, 1000);
+
+         function tick () {
+            // Get current time
+            let now = new Date().getTime();
+            // Get the difference in time to get time left until reaches 0
+            let t = launchDate - now;
+
+            // Check if time is above 0
+            if (t > 0) {
+             // Setup Days, hours, seconds and minutes
+              // Algorithm to calculate days...
+              let days = Math.floor(t / (1000 * 60 * 60 * 24));
+              // prefix any number below 10 with a "0" E.g. 1 = 01
+              if (days < 10) { days = "0" + days; }
+    
+              // Algorithm to calculate hours
+              let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              if (hours < 10) { hours = "0" + hours; }
+
+              // Algorithm to calculate minutes
+              let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+              if (mins < 10) { mins = "0" + mins; }
+
+              // Algorithm to calc seconds
+              let secs = Math.floor((t % (1000 * 60)) / 1000);
+              if (secs < 10) { secs = "0" + secs; }
+
+              // Create Time String
+              let time = `${days} : ${hours} : ${mins} : ${secs}`;
+
+              // Set time on document
+              document.querySelector('.countdown').innerText = time;
+            }
+          }
+        </script>
+      </body>
+  </html>
