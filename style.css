@@ -1,6 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #FFCF33;
+    background-color: #fcd65a;
     
 }
   
@@ -124,4 +124,7 @@ h6 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
